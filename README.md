@@ -1,7 +1,7 @@
 
 <h1 align="center"> MILESTONE-4 ASSIGNMENT (DATABASE CONNECTION & FLASK AUTHENTICATION)
 
-<h2 align="center">🏇🏻</h2>
+<h2 align="center">🏇🏻COMING SOON..</h2>
 
 
 
@@ -20,9 +20,14 @@
 
 **Result documentation API :**
 
-|       Tool     | Tool Website | My Link Documentation API with PostMan |
-|----------------|--------------|------------------------------------|
-|<img width="100" img src="https://voyager.postman.com/logo/postman-logo-icon-orange.svg">|[PostMAN](https://postman.com/) |[My temporary API Documentation in here](https://documenter.getpostman.com/view/32137902/2sA2xjzB65)|
+<div align="center">
+
+| Tool | Tool Website | My Link Documentation API with PostMan |
+|------|--------------|---------------------------------------|
+| <img width="100" src="https://voyager.postman.com/logo/postman-logo-icon-orange.svg"> | [PostMAN](https://postman.com/) | [My temporary API Documentation in here](https://documenter.getpostman.com/view/32137902/2sA2xjzB65) |
+
+</div>
+
 
 
 
