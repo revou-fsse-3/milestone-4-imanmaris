@@ -9,9 +9,10 @@
 
 **Deliverables :**
 
-| The Main Purpose |
+
+|The Simple Banking Application|
 |------------------|
-|To Understanding of connecting a Flask application to a MySQL database and implementing basic CRUD (Create(POST), Read(GET), Update(PUT), Delete(DELETE)) operation. Additionally, in this project will explore session-based OR token-based authentication methods using Flask-login and Flask-JWT-Extended|
+|This application contains several tables, namely user, account, transaction management table which will later be saved and created in the MySQL database. Later, a connection will be made from the Python code using the Flask application to the MySQL database and implementing basic CRUD operations (Create (POST), Read (GET), Update (PUT), Delete (DELETE)). Additionally, in this project will explore session based OR token based authentication methods using Flask-login and Flask-JWT-Exended|
 
 <br>
 

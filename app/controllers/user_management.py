@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, redirect, jsonify, url_for
+from flask import Blueprint, render_template, request, redirect, jsonify, url_for, flash
 from app.connectors.mysql_connector import engine
 from app.models.users import User
 from sqlalchemy import select
@@ -66,19 +66,26 @@ def do_user_login():
     try:
         user = session.query(User).filter(User.username==request.form['username']).first()
 
-        if user == None:
-            return {"message": "Username anda belum terdaftar"}
-        
+        if user is None:
+            # flash("Username anda belum terdaftar", "error")
+            # return redirect(url_for('user_management_routes.login_page'))
+            return jsonify({"message": "Username anda belum terdaftar"}), 401
+
         # Check password
         if not user.check_password(request.form['password']):
-            return {"message": "Password salah"}
-        
-        login_user(user, remember=False)
-        return redirect('/users')
-        
-    except Exception as e :
-        return {"message" : "Login belum berhasil"}
+            # flash("Kombinasi nama pengguna dan kata sandi tidak cocok.", "error")
+            # return redirect(url_for('user_management_routes.login_page'))
+            return jsonify({"message": "Kombinasi username dan password tidak cocok."}), 401
 
+        login_user(user, remember=False)
+        # flash("Login berhasil", "success")  # Tambahkan pesan sukses
+        # return redirect('/users') # Redirect ke halaman pengguna setelah login berhasil
+        return jsonify({"message": ("Login berhasil", "success")}), 200   
+
+    except Exception as e:
+        # flash("Login gagal. Silakan coba lagi.", "error")
+        # return redirect(url_for('user_management_routes.login_page'))
+        return jsonify({"message": "Login gagal. Silakan coba lagi."}), 500
 
 @user_management_routes.route("/users", methods=['GET'])
 @login_required

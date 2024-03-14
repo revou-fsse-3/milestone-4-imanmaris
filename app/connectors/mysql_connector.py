@@ -2,19 +2,6 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 import os
 
-# --- yg gapake env file ---
-
-# username = "root"
-# password = "Allahuakbar99"
-# host = "127.0.0.1"
-# database_name = "coba_w18"
-# ConnectionString = f'mysql+mysqlconnector://{username}:{password}@{host}/{database_name}'
-# engine = create_engine(ConnectionString)
-
-# connection = engine.connect()
-
-# print(os.path.exists('app/templates/products/product_home.html'))
-
 # --- yg pake env file ---
 username = os.getenv("DB_USERNAME")
 password = os.getenv("DB_PASSWORD")

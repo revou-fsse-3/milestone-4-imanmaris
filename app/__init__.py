@@ -16,6 +16,8 @@ from flask import render_template
 
 # Load Controller Files
 from app.controllers.user_management import user_management_routes
+from app.controllers.account_management import account_management_routes
+from app.controllers.transaction_management import transaction_management_routes
 
 load_dotenv()
 
@@ -43,6 +45,8 @@ def load_user(user_id):
     return session.query(User).get(int(user_id))
 
 app.register_blueprint(user_management_routes)
+app.register_blueprint(account_management_routes)
+app.register_blueprint(transaction_management_routes)
 # --
 
 @app.route('/')

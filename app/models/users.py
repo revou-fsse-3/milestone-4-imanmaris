@@ -17,6 +17,9 @@ class User(Base, UserMixin):
     created_at = mapped_column(DateTime(timezone=True), server_default=func.now())
     updated_at = mapped_column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())
 
+  # Relasi dengan model Account
+    accounts = relationship("Account", back_populates="user", cascade="all, delete-orphan")
+    
     def __repr__(self):
         return f'<User {self.username}>'
     
