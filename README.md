@@ -1,7 +1,7 @@
 
 <h1 align="center"> MILESTONE-4 ASSIGNMENT (DATABASE CONNECTION & FLASK AUTHENTICATION)
 
-<h2 align="center">🏇🏻COMING SOON..</h2>
+<h2 align="center">🏇🏻...</h2>
 
 
 
@@ -36,7 +36,7 @@
 <br>
 
 
-<h4 align="center">last created on Maret 13, 2024</h4>
+<h4 align="center">last created on Maret 14, 2024</h4>
 
 
 ---
