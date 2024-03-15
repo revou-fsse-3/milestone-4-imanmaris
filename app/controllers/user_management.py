@@ -80,7 +80,8 @@ def do_user_login():
         login_user(user, remember=False)
         # flash("Login berhasil", "success")  # Tambahkan pesan sukses
         # return redirect('/users') # Redirect ke halaman pengguna setelah login berhasil
-        return jsonify({"message": ("Login berhasil", "success")}), 200   
+        # return jsonify({"message": ("Login berhasil", "success")}), 200   
+        return jsonify({"message": "Selamat login anda succsess", "username": user.username}), 200
 
     except Exception as e:
         # flash("Login gagal. Silakan coba lagi.", "error")
